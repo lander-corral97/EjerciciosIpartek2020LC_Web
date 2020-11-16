@@ -1,20 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<jsp:include page="includes/cabecera.jsp" />
 	<h1>Futbolistas</h1>
-
-	<ul>
-		<c:forEach items="${ futbolistas }" var="fut">
-			<li style="list-style: none">${ fut.id }:${ fut.nombre }, ${ fut.equipo }
-			</li>
-		</c:forEach>
-	</ul>
-</body>
-</html>
+	<c:if test="${ !mensaje.equals('') }">
+		${ mensaje }
+	</c:if>
+	<table cellspacing = "0px">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Equipo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${ futbolistas }" var="fut">
+				<tr>
+					<td><a href="futbolista?id=${ fut.id }">${ fut.nombre }</a></td>
+					<td>${ fut.equipo }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+<jsp:include page="includes/pie.jsp" />

@@ -1,0 +1,135 @@
+@charset "ISO-8859-1";
+
+:root {
+	--primary: #2196f3;
+	--white: #ffffff;
+	--accent: #ff9800;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+table thead tr {
+	background-color: var(--primary);
+	color: var(--white);
+	font-weight: bold;
+}
+
+table thead th {
+	padding: 8px 0px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+table td {
+	padding: 5px;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #EEE;
+}
+
+nav {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+nav ul {
+	display: flex;
+	padding: 1rem;
+	justify-content: space-evenly;
+}
+
+nav li {
+	list-style: none;
+	padding: 5px 10px;
+}
+
+nav li a {
+	color: var(--white);
+	text-decoration: none;
+	padding: 5px 10px;
+	transition: 0.5s;
+	border-radius: 5px;
+}
+
+nav li a:hover {
+	background-color: var(--accent);
+	text-decoration: none;
+	padding: 5px 10px;
+	transition: 0.5s;
+}
+
+footer {
+	background-color: var(--primary);
+	color: var(--white);
+	padding: 10px;
+}
+
+.code {
+	font-family: monospace;
+	margin-left: 15px;
+}
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.container a, .container a:visited {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+.container a:hover {
+	color: var(--accent);
+}
+
+.container .detalle {
+	margin: 4px 0px;
+}
+
+.container form {
+	display: inline-block;
+	text-align: center;
+}
+
+.container form input{
+	margin: 1px 0px;
+}
+
+.container form input[type="text"]:focus, .container form input[type="number"]:focus {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+input:focus::placeholder {
+	color: var(--white);
+	opacity: 70%;
+}
+
+.container form input[type="submit"] {
+	padding: 2px 15px;
+	background-color: var(--primary);
+	color: var(--white);
+	transition: 0.5s;
+	border-radius: 5px;
+	border: 1px solid;
+}
+
+.container form input[type="submit"]:hover {
+	background-color: var(--accent);
+	color: var(--white);
+	transition: 0.5s;
+	cursor: pointer;
+}
