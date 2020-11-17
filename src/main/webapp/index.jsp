@@ -7,5 +7,5 @@
 		%>
 	
 		<p>Esto hace un GET</p>
-		<a href="futbol">Futbolistas</a>
+		<a class="button" href="futbol">Futbolistas</a>
 <jsp:include page="includes/pie.jsp" />

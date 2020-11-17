@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -38,6 +38,12 @@ table tbody tr:nth-child(even) {
 	background-color: #EEE;
 }
 
+header {
+	background-image: url('../images/football_banner.jpg');
+	height: 201px;
+	background-size: 100% 100%;
+}
+
 nav {
 	background-color: var(--primary);
 	color: var(--white);
@@ -45,6 +51,7 @@ nav {
 
 nav ul {
 	display: flex;
+	margin: 0px;
 	padding: 1rem;
 	justify-content: space-evenly;
 }
@@ -83,7 +90,7 @@ footer {
 .container {
 	max-width: 1024px;
 	margin: auto;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 
 .container a, .container a:visited {
@@ -132,4 +139,28 @@ input:focus::placeholder {
 	color: var(--white);
 	transition: 0.5s;
 	cursor: pointer;
+}
+
+.container .button, .container .button:visited {
+	padding: 10px;
+	color: var(--white);
+	background-color: var(--primary);
+	border-radius: 5px;
+	border: 1px solid #219686;
+	transition: 0.5s;
+}
+
+.container .button:hover {
+	background-color: var(--accent);
+	transition: 0.5s;
+	cursor: pointer;
+	border-color: #945800;
+	box-shadow: 0px 0px 3px 4px #CCC;
+}
+
+.container .button:active {
+	background-color: #945800;
+	cursor: wait;
+	border-color: #333;
+	box-shadow: 0px 0px 3px 4px #aaaaaa;
 }
