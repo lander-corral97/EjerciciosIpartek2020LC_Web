@@ -38,6 +38,11 @@ table tbody tr:nth-child(even) {
 	background-color: #EEE;
 }
 
+input:focus::placeholder {
+	color: var(--white);
+	opacity: 70%;
+}
+
 header {
 	background-image: url('../images/football_banner.jpg');
 	height: 201px;
@@ -47,6 +52,8 @@ header {
 nav {
 	background-color: var(--primary);
 	color: var(--white);
+	position: sticky;
+	top: 0;
 }
 
 nav ul {
@@ -107,8 +114,13 @@ footer {
 }
 
 .container form {
-	display: inline-block;
-	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	margin: 0 auto 2rem auto;
+}
+
+.container label {
+	color: var(--primary);
 }
 
 .container form input{
@@ -118,11 +130,6 @@ footer {
 .container form input[type="text"]:focus, .container form input[type="number"]:focus {
 	background-color: var(--primary);
 	color: var(--white);
-}
-
-input:focus::placeholder {
-	color: var(--white);
-	opacity: 70%;
 }
 
 .container form input[type="submit"] {
@@ -163,4 +170,63 @@ input:focus::placeholder {
 	cursor: wait;
 	border-color: #333;
 	box-shadow: 0px 0px 3px 4px #aaaaaa;
+}
+
+.center {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.content {
+	border-radius: 10px;
+	border: 1px solid var(--primary);
+	padding: 30px;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+	background-color: white;
+	opacity: 1;
+}
+
+.content div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.content .button:hover {
+	transition: 0s;
+	color: var(--white);
+}
+
+.content .button {
+	transition: 0s;
+}
+
+.fade-to-black {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+}
+
+
+.fade-to-black:target {
+	visibility: visible;
+}
+
+.form-group {
+	display: flex;
+	justify-content: center;
+}
+
+.form-group label {
+	width:30%;
+}
+
+.form-group input[type='number'], .form-group input[type='text'] {
+	width:30%;
 }
