@@ -18,7 +18,8 @@
 					<td>${ fut.nombre }</td>
 					<td>${ fut.equipo }</td>
 					<td class="center"><a href="futbolista?id=${ fut.id }"><i class="fa fa-eye" aria-hidden="true"></i></a>
-					<a href="#popup${ fut.id }"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+					<a href="#popup${ fut.id }"><i class="fa fa-trash" aria-hidden="true"></i></a>
+					<a href="modificar-futbolista?id=${ fut.id }"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				</tr>
 					<div id="popup${ fut.id }" class="fade-to-black">
 						<div class="content">
